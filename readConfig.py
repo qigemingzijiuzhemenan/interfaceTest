@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import os
 import codecs
 import configparser
@@ -38,7 +39,10 @@ class ReadConfig:
         self.cf.set("HEADERS", name, value)
         with open(configPath, 'w+') as f:
             self.cf.write(f)
-
+    def set_pda(self, name, value):
+        self.cf.set("PDA", name, value)
+        with open(configPath, 'w+') as f:
+            self.cf.write(f)
     def get_url(self, name):
         value = self.cf.get("URL", name)
         return value
@@ -52,8 +56,10 @@ class ReadConfig:
     def get_Sql_db(self, name):
         value = self.cf.get("sqlserver_DATABASE", name)
         return value
-    def get_pda_data(self, name):
+    def get_app_date(self, name):
+        value = self.cf.get("APP", name)
+        return value
+    def get_pda_date(self, name):
         value = self.cf.get("PDA", name)
         return value
-
 
