@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8" />
+ </head>
+    <div class='heading'>
+        <h1>holle！测试完成！以下是测试概况：</h1>
+    <p class='attribute'><strong>测试环境:</strong> %s</p>
+    <p class='attribute'><strong>开始时间:</strong> %s</p>
+    <p class='attribute'><strong>耗时:</strong> %s</p>
+    <p class='attribute'><strong>执行情况:</strong> %s</p>
+    <br />
+    <br />
+    <br />
+    <br />
+        <h1>详细信息请查看附件。</h1>
+    </div>
+</html>

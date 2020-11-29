@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<interface>
+    <url name="register">
+        <group>User</group>
+        <module>Member</module>
+        <action>registerCommon</action>
+    </url>
+
+    <url name="login">
+        <group>User</group>
+        <module>Member</module>
+        <action>loginCommon</action>
+    </url>
+
+    <url name="registerQuick">
+        <group>User</group>
+        <module>Member</module>
+        <action>registerQuick</action>
+    </url>
+
+    <url name="generate">
+        <group>User</group>
+        <module>Token</module>
+        <action>generate</action>
+    </url>
+
+    <url name="loginFb">
+        <group>User</group>
+        <module>Member</module>
+        <action>loginFb</action>
+    </url>
+
+    <url name="logout">
+        <group>User</group>
+        <module>Member</module>
+        <action>logout</action>
+    </url>
+
+    <url name="accountSetting">
+        <group>User</group>
+        <module>Member</module>
+        <action>accountSetting</action>
+    </url>
+
+    <url name="updatePassword">
+        <group>User</group>
+        <module>Member</module>
+        <action>updatePassword</action>
+    </url>
+
+    <url name="uploadImg">
+        <group>User</group>
+        <module>Member</module>
+        <action>uploadImg</action>
+    </url>
+
+    <url name="addAddress">
+        <group>User</group>
+        <module>Address</module>
+        <action>add</action>
+    </url>
+
+    <url name="getAddressList">
+        <group>User</group>
+        <module>Address</module>
+        <action>getList</action>
+    </url>
+
+    <url name="getAddress">
+        <group>User</group>
+        <module>Address</module>
+        <action>get</action>
+    </url>
+
+    <url name="deleteAddress">
+        <group>User</group>
+        <module>Address</module>
+        <action>delete</action>
+    </url>
+
+    <url name="productInfo">
+        <group>product</group>
+        <module>product</module>
+        <action>info</action>
+    </url>
+    <url name="getgzsjlist">
+        <group>tl-cyberbrain-ai-processing</group>
+        <module>gzsj</module>
+        <action>page</action>
+    </url>
+    <url name="queryFxddFptj">
+        <group>tl-cyberbrain-govern</group>
+        <module>fxtj</module>
+        <action>queryFxddFptj</action>
+    </url>
+        <url name="start_parking_pda">
+        <group>system</group>
+        <module>data?appId=%s&amp;berthcode=%s&amp;carplatecolour=1&amp;carproperty=%s&amp;comid=%s&amp;dotime=%s&amp;issensor=1&amp;method=startParking&amp;module=pda&amp;payType=1&amp;pdaareatype=1&amp;platenumber=%s&amp;sectionid=%s&amp;service=Std&amp;terminalno=%s&amp;u=%s&amp;v=%s&amp;ve=2&amp;vehicletype=%s</module>
+    </url>
+</interface>
