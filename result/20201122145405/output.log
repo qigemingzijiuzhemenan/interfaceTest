@@ -1,0 +1,6 @@
+2020-11-22 14:54:05,836 - root - INFO - Url设置成功：http://192.168.9.101:6085/system/data
+2020-11-22 14:54:05,945 - root - INFO - ********测试 开始********
+2020-11-22 14:54:05,964 - root - INFO - Url设置成功：http://192.168.9.101:6085/system/data?appId=083533342&berthcode=300001&carplatecolour=1&carproperty=1&comid=200000042&dotime=1605916800000&issensor=1&method=startParking&module=pda&payType=1&pdaareatype=1&platenumber=粤V60001&sectionid=20180913190834542795545981729288&service=Std&terminalno=A100004A9C46FB&u=20201109171423491112262105679684&v=20201122145410264264398000149781&ve=2&vehicletype=1&sign=29c941f0c62666ceeb960ff47b216cba
+2020-11-22 14:54:06,030 - root - INFO - response获取成功：{"_inTime":1606028050364,"_outTime":1606028050365,"message":"0x03 非法访问:URL的MD5错误","ngis":"a65348adc9c26987642d1e457eb7e47e","runtime":1,"state":0,"ts":1606028050365}
+2020-11-22 14:54:06,031 - root - INFO - *********测试 结束*********
+2020-11-22 14:54:16,324 - root - INFO - 测试结果已通过电子邮件发送出去.

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>build1022接口测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 800px;
+
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+    text-align:center;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>build1022接口测试报告</h1>
+<p class='attribute'><strong>开始时间:</strong> 2020-11-22 14:54:05</p>
+<p class='attribute'><strong>耗时:</strong> 0:00:00.073227</p>
+<p class='attribute'><strong>执行情况:</strong> 失败 1 | 报错 2</p>
+
+<p class='description'>本次测试已完成，以下是测试详情。</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td colspan='2'>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>View</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>paramunittest.test_Billingrules_0</td>
+    <td>白天5分钟</td>
+    <td>3</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td><a href="javascript:showClassDetail('c1',3)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td colspan='2' class='errorCase'><div class='testcase'>test_end_parking</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "F:\test\interfaceTest\testCase\test_Billingrules.py", line 162, in tearDown
+    self.log.build_case_line(self.case_name, self.info['code'], self.info['message'])
+TypeError: 'NoneType' object is not subscriptable
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.2' class='none'>
+    <td colspan='2' class='failCase'><div class='testcase'>test_start_parking_pda</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        fail</a>
+
+    <div id='div_ft1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.2: 
+请求地址：http://192.168.9.101:6085/system/data?appId=083533342&amp;berthcode=300001&amp;carplatecolour=1&amp;carproperty=1&amp;comid=200000042&amp;dotime=1605916800000&amp;issensor=1&amp;method=startParking&amp;module=pda&amp;payType=1&amp;pdaareatype=1&amp;platenumber=%E7%B2%A4V60001&amp;sectionid=20180913190834542795545981729288&amp;service=Std&amp;terminalno=A100004A9C46FB&amp;u=20201109171423491112262105679684&amp;v=20201122145410264264398000149781&amp;ve=2&amp;vehicletype=1&amp;sign=29c941f0c62666ceeb960ff47b216cba
+
+请求返回值：
+{
+    "_inTime": 1606028050364,
+    "_outTime": 1606028050365,
+    "message": "0x03 非法访问:URL的MD5错误",
+    "ngis": "a65348adc9c26987642d1e457eb7e47e",
+    "runtime": 1,
+    "state": 0,
+    "ts": 1606028050365
+}
+Traceback (most recent call last):
+  File "F:\test\interfaceTest\testCase\test_Billingrules.py", line 108, in test_start_parking_pda
+    self.checkResult()
+  File "F:\test\interfaceTest\testCase\test_Billingrules.py", line 171, in checkResult
+    self.assertEqual(self.info['message'], self.message)
+AssertionError: '0x03 非法访问:URL的MD5错误' != '操作成功'
+- 0x03 非法访问:URL的MD5错误
++ 操作成功
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='ft1.3' class='none'>
+    <td colspan='2' class='errorCase'><div class='testcase'>test_start_parking_pda</div></td>
+    <td colspan='7' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.3')" >
+        error</a>
+
+    <div id='div_ft1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.3: 
+请求地址：http://192.168.9.101:6085/system/data?appId=083533342&amp;berthcode=300001&amp;carplatecolour=1&amp;carproperty=1&amp;comid=200000042&amp;dotime=1605916800000&amp;issensor=1&amp;method=startParking&amp;module=pda&amp;payType=1&amp;pdaareatype=1&amp;platenumber=%E7%B2%A4V60001&amp;sectionid=20180913190834542795545981729288&amp;service=Std&amp;terminalno=A100004A9C46FB&amp;u=20201109171423491112262105679684&amp;v=20201122145410264264398000149781&amp;ve=2&amp;vehicletype=1&amp;sign=29c941f0c62666ceeb960ff47b216cba
+
+请求返回值：
+{
+    "_inTime": 1606028050364,
+    "_outTime": 1606028050365,
+    "message": "0x03 非法访问:URL的MD5错误",
+    "ngis": "a65348adc9c26987642d1e457eb7e47e",
+    "runtime": 1,
+    "state": 0,
+    "ts": 1606028050365
+}
+Traceback (most recent call last):
+  File "F:\test\interfaceTest\testCase\test_Billingrules.py", line 162, in tearDown
+    self.log.build_case_line(self.case_name, self.info['code'], self.info['message'])
+KeyError: 'code'
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td colspan='2'>Total</td>
+    <td>3</td>
+    <td>0</td>
+    <td>1</td>
+    <td>2</td>
+    <td>&nbsp;</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>
