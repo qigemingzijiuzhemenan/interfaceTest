@@ -12,66 +12,66 @@ from xml.sax import saxutils
 
 
 
-# Case_xls = common.get_xls("gzfxCase.xlsx", "getgzsjlist")
-# @paramunittest.parametrized(*Case_xls)
-# class testlist(unittest.TestCase):
-#     def setParameters(self, a, b, c, d, e, f, g):
-#         self.a=a
-#         self.b=b
-#         self.c=c
-#         self.d=d
-#         self.e=e
-#         self.f=f
-#         self.g=g
-#
-#     @classmethod
-#     def setUpClass(cls) -> None:
-#         print('setUpClass')
-#
-#     def setUp(self) -> None:
-#         print('setUp')
-#     def test_1(self):
-#         print('test_1')
-#         print(self.a,self.b,self.d,self.d,self.e,self.f,self.g)
-#     def test_2(self):
-#         print('test_2')
-#         print(self.a,self.b,self.d,self.d,self.e,self.f,self.g)
-#     def tearDown(self) -> None:
-#         print('tearDown')
-#
-#     @classmethod
-#     def tearDownClass(cls) -> None:
-#         print('tearDownClass')
-
-Case_xls = Get_excel.read_casefile_2("gzfxCase.xlsx", "getgzsjlist")
-@ddt.ddt
+Case_xls = common.get_xls("gzfxCase.xlsx", "getgzsjlist")
+@paramunittest.parametrized(*Case_xls)
 class testlist(unittest.TestCase):
+    def setParameters(self, a, b, c, d, e, f, g):
+        self.a=a
+        self.b=b
+        self.c=c
+        self.d=d
+        self.e=e
+        self.f=f
+        self.g=g
+
     @classmethod
     def setUpClass(cls) -> None:
         print('setUpClass')
 
     def setUp(self) -> None:
         print('setUp')
-    @ddt.data(*Case_xls)
-    # @ddt.unpack
-    def test_1(self,data):
+    def test_1(self):
         print('test_1')
-        print(data)
-        self.case_name = data['case_name']
-        self.berthcode = data['method']
-        self.vehicletype = data['cookie']
-        self.carproperty = data['data']
-        self.dotime = data['result']
-        self.endtime = data['code']
-        self.msg = data['msg']
-
+        print(self.a,self.b,self.d,self.d,self.e,self.f,self.g)
     def test_2(self):
         print('test_2')
+        print(self.a,self.b,self.d,self.d,self.e,self.f,self.g)
     def tearDown(self) -> None:
         print('tearDown')
 
     @classmethod
     def tearDownClass(cls) -> None:
         print('tearDownClass')
+
+# Case_xls = Get_excel.read_casefile_2("gzfxCase.xlsx", "getgzsjlist")
+# @ddt.ddt
+# class testlist(unittest.TestCase):
+#     @classmethod
+#     def setUpClass(cls) -> None:
+#         print('setUpClass')
+#
+#     def setUp(self) -> None:
+#         print('setUp')
+#     @ddt.data(*Case_xls)
+#     # @ddt.unpack
+#     def test_1(self,data):
+#         print('test_1')
+#         print(data)
+#         self.case_name = data['case_name']
+#         self.berthcode = data['method']
+#         self.vehicletype = data['cookie']
+#         self.carproperty = data['data']
+#         self.dotime = data['result']
+#         self.endtime = data['code']
+#         self.msg = data['msg']
+#
+#     def test_2(self):
+#         print('test_2')
+#     def tearDown(self) -> None:
+#         print('tearDown')
+#
+#     @classmethod
+#     def tearDownClass(cls) -> None:
+#         print('tearDownClass')
 if __name__ == '__main__':
     unittest.main()
