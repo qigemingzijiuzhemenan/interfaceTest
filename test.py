@@ -23,7 +23,7 @@ class testlist(unittest.TestCase):
         self.e=e
         self.f=f
         self.g=g
-
+        self.k=None
     @classmethod
     def setUpClass(cls) -> None:
         print('setUpClass')
