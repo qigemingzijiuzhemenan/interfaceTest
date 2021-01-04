@@ -38,7 +38,7 @@ class testlist(unittest.TestCase):
         print(self.a, self.b, self.d, self.d, self.e, self.f, self.g)
 
     def test_2(self):
-        print('test_2_')
+        print('test_2')
         print(self.a, self.b, self.d, self.d, self.e, self.f, self.g)
 
     def tearDown(self) -> None:
